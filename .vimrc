@@ -10,6 +10,7 @@ Plug 'ghifarit53/tokyonight-vim'
 call plug#end()
 
 
+
 map q :quit<CR>
 map <C-s> :w<CR>
 inoremap <C-Backspace> <C-w>
@@ -45,14 +46,16 @@ set splitbelow
 set autoread
 set mouse=a
 filetype on
-filetype plugin indent on
-
+"filetype plugin indent
 
 
 " TEMAS
 set termguicolors
-let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_style = 'night'
 let g:tokyonight_enable_italic = 1
+let g:tokyonight_transparent_background = 1
+
+
 colorscheme tokyonight
 
 if has('gui_running')
@@ -61,11 +64,9 @@ if has('gui_running')
 endif
 
 
-"hi! MatchParen cterm=NONE,bold gui=NONE,bold guibg=NONE guifg=#FFFF00
-
-
 set completeopt-=preview
 let g:ycm_show_diagnostics_ui = 0
+
 
 " UTILSNIPS
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
