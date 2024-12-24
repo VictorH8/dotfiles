@@ -10,7 +10,6 @@ Plug 'ghifarit53/tokyonight-vim'
 call plug#end()
 
 
-
 map q :quit<CR>
 map <C-s> :w<CR>
 inoremap <C-Backspace> <C-w>
@@ -46,7 +45,6 @@ set splitbelow
 set autoread
 set mouse=a
 filetype on
-"filetype plugin indent
 
 
 " TEMAS
