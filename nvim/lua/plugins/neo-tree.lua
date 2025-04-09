@@ -7,14 +7,15 @@ return {
         "MunifTanjim/nui.nvim",
     },
     lazy = false,
-    opts = {},
     config = function()
-        --vim.keymap.set('n', '<C-b>', ':Neotree toggle<CR>', {})
-        vim.keymap.set('n', '<C-b>', ':Neotree show<CR>', {}) -- Abre
-        vim.keymap.set('n', '<C-x>', ':Neotree close<CR>', {}) -- Fecha
-        if vim.bo.filetype ~= "neo-tree" then
-            vim.bo.buftype = ""
-        end
-
+        require("neo-tree").setup({
+            filesystem = {
+                filtered_items = {
+                    hide_dotfiles = false
+                },
+            },
+        })
+        vim.keymap.set('n', '<C-b>', ':Neotree focus<CR>', {})
+        vim.keymap.set('n', '<C-q>', ':Neotree close<CR>', {})
     end
 }
